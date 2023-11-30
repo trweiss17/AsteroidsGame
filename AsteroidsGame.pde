@@ -1,5 +1,6 @@
 Spaceship jim;
 Star[] field;
+ArrayList <Asteroid> belt= new ArrayList <Asteroid>();
 
 
 public void setup(){
@@ -8,7 +9,10 @@ size(500,500);
 field= new Star[300];
 for( int i=0; i<field.length; i++){
   field[i]=new Star();
-}
+  for(int i=0; i< belt.size();i++){
+    belt.get(i).show();
+    belt.get(i).move();
+  }
 }
 
  
