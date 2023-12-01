@@ -6,38 +6,38 @@ class Asteroid extends Floater
      corners= 16;          
     xCorners= new int[corners];
     yCorners= new int[corners];
-    xCorners[0]= 7;
-    yCorners[0]= -10;
-    xCorners[1]= 5;
-    yCorners[1]= -13;
+    xCorners[0]= 9;
+    yCorners[0]= -12;
+    xCorners[1]= 9;
+    yCorners[1]= -15;
     xCorners[2]= 0;
     yCorners[2]= -11;
-    xCorners[3]= -2;
-    yCorners[3]= -11;
-    xCorners[4]= -4;
-    yCorners[4]= -8;
-    xCorners[5]=-8;
-    yCorners[5]=-5;
-    xCorners[6]= -9;
-    yCorners[6]= 3;
-    xCorners[7]= -11;
-    yCorners[7]= 4;
-    xCorners[8]= -10;
-    yCorners[8]= 7;
-    xCorners[9]= -2;
-    yCorners[9]= 7;
-    xCorners[10]= -1;
-    yCorners[10]= 9;
-    xCorners[11]= 0;
-    yCorners[11]= 8;
-    xCorners[12]= 1;
-    yCorners[12]= 6;
-    xCorners[13]= 4;
-    yCorners[13]= 5;
-    xCorners[14]= 7;
-    yCorners[14]= -1;
-    xCorners[15]= 6;
-    yCorners[15]= -8;
+    xCorners[3]= -4;
+    yCorners[3]= -13;
+    xCorners[4]= -6;
+    yCorners[4]= -10;
+    xCorners[5]=-10;
+    yCorners[5]=-7;
+    xCorners[6]= -11;
+    yCorners[6]= 8;
+    xCorners[7]= -13;
+    yCorners[7]= 6;
+    xCorners[8]= -12;
+    yCorners[8]= 9;
+    xCorners[9]= -4;
+    yCorners[9]= 9;
+    xCorners[10]= -3;
+    yCorners[10]= 11;
+    xCorners[11]= 5;
+    yCorners[11]= 10;
+    xCorners[12]= 7;
+    yCorners[12]= 10;
+    xCorners[13]= 9;
+    yCorners[13]= 7;
+    xCorners[14]= 9;
+    yCorners[14]= -3;
+    xCorners[15]= 10;
+    yCorners[15]= -10;
     
     
     
@@ -45,9 +45,10 @@ class Asteroid extends Floater
     myColor= color(191,191,191);
     myCenterX= (Math.random()*500);
     myCenterY= (Math.random()*500);
-    myXspeed=(Math.random()*3)-1;
-    myYspeed= (Math.random()*3)-1;
-    myPointDirection= 0;
+    myXspeed=(Math.random()*5)-1;
+    myYspeed= (Math.random()*5)-1;
+    myPointDirection=(Math.random()*360);
+    rotSpeed= 5;
   }
   
   public void move()
