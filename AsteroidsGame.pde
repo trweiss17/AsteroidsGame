@@ -1,12 +1,13 @@
 Spaceship jim;
 Star[] field;
 ArrayList <Asteroid> spock;
+int spockStart= 15;
 
 
 
 public void setup(){
  jim= new Spaceship();
- //spock= new ArrayList <Asteroid>();
+
  
 size(500,500);
 field= new Star[300];
@@ -14,28 +15,28 @@ for( int i=0; i<field.length; i++){
   field[i]=new Star();
 }
 spock= new ArrayList <Asteroid>();
-for(int i=0; i<
+for(int i=0; i<spockStart; i++){
+  spock.add(new Asteroid());
 }
-//  for(int i=0; i<spock.size(); i++){
-//    spock.get(i)= new Asteroid();
-//  }
-//}
+}
  
 public void draw() 
 {
   background(0);
   jim.show();
  jim.move();
- spock.show();
- spock.move();
   noStroke();
   for(int i=0; i<field.length; i++){
     field[i].show();
   }
-    // for(int i=0; i< spock.size();i++){
-    //spock.get(i).show();
-    //spock.get(i).move();
-  }
+  for(int i=0; i< spock.size();i++){
+ spock.get(i).show();
+ spock.get(i).move();
+ float d= dist((float)jim.getX(),(float)jim.getY(),(float)spock.get(i).getX(),(float)spock.get(i).getY());
+ if(d<10)
+ spock.remove(i);
+ }
+}
 
 
   public void keyPressed(){
