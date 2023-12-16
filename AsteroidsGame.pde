@@ -5,7 +5,7 @@ int spockStart= 15;
 ArrayList <Bullet> scotty;
 
 public boolean shot= false;
-public int ammo = 275;
+public int ammo = 305;
 
 
 
@@ -51,7 +51,7 @@ public void draw()
      ammo--;
    }
 }else{
-  if(ammo<275){ammo++;}
+  if(ammo<305){ammo++;}
 }
 for(int i=0; i< scotty.size();i++){
   scotty.get(i).show();
@@ -99,4 +99,9 @@ for(int i=0; i< scotty.size(); i++){
 if(key=='f'){
   shot= true;
 }
+ }
+ public void keyReleased(){
+   if(key=='f'){
+     shot=false;
+   }
  }
