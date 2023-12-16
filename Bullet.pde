@@ -22,7 +22,7 @@ public void show(){
 public void shoot(){
     double dRadians =myPointDirection*(Math.PI/180);     
     //change coordinates of direction of travel    
-    myXspeed += ((dRadians) * Math.cos(myXspeed));    
-    myYspeed += ((dRadians) * Math.sin(myXspeed)); 
+    myCenterX += myXspeed * Math.cos(dRadians);    
+    myCenterY += myYspeed * Math.sin(dRadians); 
 }
 }
